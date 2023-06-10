@@ -1,8 +1,9 @@
 package cadastro;
 public class Funcionario extends Pessoa{
-    public int id;
-    public String cargo;
-    public float salario;
+    private int id;
+    private String cargo;
+    private float salario;
+    
     
     public Funcionario(int id, String nome, String cargo, float salario){
         this.id= id;
@@ -10,6 +11,7 @@ public class Funcionario extends Pessoa{
         this.cargo= cargo;
         this.salario= salario;
     }
+    
 
     public int getId() {
         return id;
