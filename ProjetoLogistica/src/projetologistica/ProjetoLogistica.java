@@ -1,6 +1,7 @@
 package projetologistica;
 
 import cadastro.Funcionario;
+import cadastro.Produto;
 import cadastro.Veiculo;
 
 /**
@@ -21,6 +22,11 @@ public class ProjetoLogistica {
         v[2] = new Veiculo(123, "Scania", 30000);
         System.out.println(v[2].exibir());
         
+        Produto[] p = new Produto[3];
+        p[0] = new Produto(111, "Cafe EF 1Kg", 1, 20.0f);
+        p[1] = new Produto(121, "Achocolatado LT 1kg", 1, 8.0f);
+        p[2] = new Produto(122, "Cafe Trad 1kg", 1, 15.0f);
+        System.out.println(p[2].exibir());
         
     }
     
