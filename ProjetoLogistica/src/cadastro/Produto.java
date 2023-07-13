@@ -9,12 +9,14 @@ public class Produto {
     private String descricao;
     private int pesounit;
     private float valor;
+    private int estoque;
     
-    public Produto(int codigo, String descricao, int pesounit, float valor){
+    public Produto(int codigo, String descricao, int pesounit, float valor, int estoque){
         this.codigo = codigo;
         this.descricao = descricao;
         this.pesounit = pesounit;
         this.valor = valor;
+        this.estoque = estoque;
     }
 
     public int getCodigo() {
@@ -49,11 +51,28 @@ public class Produto {
         this.valor = valor;
     }
 
+    public int getEstoque(){
+        return estoque;
+    }
+    
+    public void setEstoque(int estoque){
+        this.estoque = estoque;
+    }
+    
+    public void aumentaEstoque (int qtd){
+        this.setEstoque(this.getEstoque() + qtd);
+    }
+    
+    public void diminuiEstoque (int qtd){
+        this.setEstoque(this.getEstoque() - qtd);
+    }
+    
     public String exibir() {
         return "Produto{" + "codigo=" + codigo 
                 + ", descricao=" + descricao 
                 + ", pesounit=" + pesounit 
-                + ", valor=" + valor + '}';
+                + ", valor=" + valor + '}'
+                + ", estoque=" + estoque;
     }
     
     

@@ -1,17 +1,15 @@
 package cadastro;
-public class Funcionario extends Pessoa{
+public class Funcionario extends Pessoa implements Comparable<Funcionario>{
     private int id;
     private String cargo;
     private float salario;
-    
-    
-    public Funcionario(int id, String nome, String cargo, float salario){
-        this.id= id;
+
+    public Funcionario(int id, String nome, String cargo, float salario) {
+        this.id = id;
         this.setNome(nome);
-        this.cargo= cargo;
-        this.salario= salario;
+        this.cargo = cargo;
+        this.salario = salario;
     }
-    
 
     public int getId() {
         return id;
@@ -42,14 +40,22 @@ public class Funcionario extends Pessoa{
         this.setSalario(this.getSalario()+valor);
     }
 
+    /**
     public String exibir(){
         return "Funcionário{" + "Id: " + this.getId() 
                 + " Nome: " + this.getNome()
                 + " Cargo: " + this.getCargo() + "}";        
     }
+    */
 
-    
-    
+    @Override
+    public String toString(){
+        return this.nome;
+    }
+    @Override
+    public int compareTo(Funcionario funcionario){
+        return this.nome.compareTo(funcionario.getNome());
+    }
     
     
 }
