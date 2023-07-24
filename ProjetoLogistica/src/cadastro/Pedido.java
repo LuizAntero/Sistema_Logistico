@@ -6,6 +6,7 @@ public class Pedido {
     private int qtdItem;
     private float valorPedido;
 
+
     public Pedido(Cliente cliente, Produto produto, int qtdItem) {
         this.cliente = cliente;
         this.produto = produto;
@@ -14,15 +15,12 @@ public class Pedido {
     }
 
     
-    
-    
-    
     public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setCliente(String cliente) {
+        cliente = cliente;
     }
 
     public Produto getProduto() {
@@ -62,13 +60,6 @@ public class Pedido {
         System.out.println("Valor do pedido: " + valorPedido);
         
     }
-   
-    
-    
-    
-    
-    
-    
-    
-    
+
+
 }

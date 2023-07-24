@@ -19,7 +19,7 @@ public class Cliente {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo() {
         this.codigo = codigo;
     }
 
